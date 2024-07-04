@@ -166,6 +166,11 @@ issues:
         - lll
         - bodyclose
 
+    - path: api.go
+      linters:
+        - gochecknoglobals
+      text: DefaultAPI
+
   include:
     - EXC0002
     - EXC0005
