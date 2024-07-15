@@ -32,8 +32,8 @@ func WithStructLenient(lenient bool) APIOption {
 // DefaultAPI is the default instance of API with all configuration settings set to default.
 var DefaultAPI = &API{}
 
-// API is the core type in scanapi. It implements all the logic and exposes functionality available in the package.
-// With API type users can create a custom API instance and override default settings hence configure scanapi.
+// API is the core type in spxscan. It implements all the logic and exposes functionality available in the package.
+// With API type users can create a custom API instance and override default settings hence configure spxscan.
 type API struct {
 	lenient bool
 }
