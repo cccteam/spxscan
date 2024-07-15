@@ -32,8 +32,8 @@ func WithStructLenient(lenient bool) APIOption {
 // DefaultAPI is the default instance of API with all configuration settings set to default.
 var DefaultAPI = &API{}
 
-// API is the core type in scanapi. It implements all the logic and exposes functionality available in the package.
-// With API type users can create a custom API instance and override default settings hence configure scanapi.
+// API is the core type in spxscan. It implements all the logic and exposes functionality available in the package.
+// With API type users can create a custom API instance and override default settings hence configure spxscan.
 type API struct {
 	lenient bool
 }
@@ -65,6 +65,40 @@ func (api *API) Select(ctx context.Context, db Querier, dst any, statement spann
 	iter := db.Query(ctx, statement)
 	if err := api.ScanAll(dst, iter); err != nil {
 		return fmt.Errorf("scanning all: %w", err)
+	}
+
+	return nil
+}
+
+// UpdateAndGet is a package-level helper function that uses the API.Get() call inside a transaction.
+// This should be used when data is being returned after an update using the THEN RETURN clause.
+func (api *API) UpdateAndGet(ctx context.Context, client TxnRunner, dst any, statement spanner.Statement) error {
+	_, err := client.ReadWriteTransaction(ctx, func(ctx context.Context, txn *spanner.ReadWriteTransaction) error {
+		if err := api.Get(ctx, txn, dst, statement); err != nil {
+			return fmt.Errorf("API.Get(): %w", err)
+		}
+
+		return nil
+	})
+	if err != nil {
+		return fmt.Errorf("ReadWriteTransaction(): %w", err)
+	}
+
+	return nil
+}
+
+// UpdateAndSelect is a high-level helper function that uses the API.Select() call inside a transaction.
+// This should be used when data is being returned after an update using the THEN RETURN clause.
+func (api *API) UpdateAndSelect(ctx context.Context, client TxnRunner, dst any, statement spanner.Statement) error {
+	_, err := client.ReadWriteTransaction(ctx, func(ctx context.Context, txn *spanner.ReadWriteTransaction) error {
+		if err := api.Select(ctx, txn, dst, statement); err != nil {
+			return fmt.Errorf("API.Select(): %w", err)
+		}
+
+		return nil
+	})
+	if err != nil {
+		return fmt.Errorf("ReadWriteTransaction(): %w", err)
 	}
 
 	return nil

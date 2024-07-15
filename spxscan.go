@@ -3,7 +3,6 @@ package spxscan
 
 import (
 	"context"
-	"fmt"
 	"time"
 
 	"cloud.google.com/go/spanner"
@@ -29,36 +28,14 @@ type TxnRunner interface {
 	ReadWriteTransaction(ctx context.Context, f func(context.Context, *spanner.ReadWriteTransaction) error) (commitTimestamp time.Time, err error)
 }
 
-// UpdateAndGet is a package-level helper function that uses the DefaultAPI.Get() call inside a transaction.
-// This should be used when data is being returned after an update using the THEN RETURN clause.
+// UpdateAndGet is a package-level helper function that uses the DefaultAPI object.
+// See API.UpdateAndGet for details.
 func UpdateAndGet(ctx context.Context, client TxnRunner, dst any, statement spanner.Statement) error {
-	_, err := client.ReadWriteTransaction(ctx, func(ctx context.Context, txn *spanner.ReadWriteTransaction) error {
-		if err := DefaultAPI.Get(ctx, txn, dst, statement); err != nil {
-			return fmt.Errorf("spxscan.Get(): %w", err)
-		}
-
-		return nil
-	})
-	if err != nil {
-		return fmt.Errorf("ReadWriteTransaction(): %w", err)
-	}
-
-	return nil
+	return DefaultAPI.UpdateAndGet(ctx, client, dst, statement)
 }
 
-// UpdateAndSelect is a package-level helper function that uses the DefaultAPI.Select() call inside a transaction.
-// This should be used when data is being returned after an update using the THEN RETURN clause.
+// UpdateAndSelect is a package-level helper function that uses the DefaultAPI object.
+// See API.UpdateAndSelect for details.
 func UpdateAndSelect(ctx context.Context, client TxnRunner, dst any, statement spanner.Statement) error {
-	_, err := client.ReadWriteTransaction(ctx, func(ctx context.Context, txn *spanner.ReadWriteTransaction) error {
-		if err := DefaultAPI.Select(ctx, txn, dst, statement); err != nil {
-			return fmt.Errorf("spxscan.Get(): %w", err)
-		}
-
-		return nil
-	})
-	if err != nil {
-		return fmt.Errorf("ReadWriteTransaction(): %w", err)
-	}
-
-	return nil
+	return DefaultAPI.UpdateAndSelect(ctx, client, dst, statement)
 }
