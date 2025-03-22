@@ -1,9 +1,10 @@
 module github.com/cccteam/spxscan
 
-go 1.22.5
+go 1.24.1
 
 require (
 	cloud.google.com/go/spanner v1.64.0
+	github.com/go-playground/errors/v5 v5.4.0
 	google.golang.org/api v0.188.0
 )
 
@@ -24,6 +25,7 @@ require (
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
+	github.com/go-playground/pkg/v5 v5.21.3 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/s2a-go v0.1.7 // indirect

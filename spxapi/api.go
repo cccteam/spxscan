@@ -1,4 +1,6 @@
-package spxscan
+// package spxapi implements the core logic of the API type and exposes the functionality available in the package.
+// With the API type, users can create a custom API instance and override default settings to configure spxscan.
+package spxapi
 
 import (
 	"context"
@@ -29,8 +31,8 @@ func WithStructLenient(lenient bool) APIOption {
 	}
 }
 
-// DefaultAPI is the default instance of API with all configuration settings set to default.
-var DefaultAPI = &API{}
+// Default is the default instance of API with all configuration settings set to default.
+var Default = &API{}
 
 // API is the core type in spxscan. It implements all the logic and exposes functionality available in the package.
 // With API type users can create a custom API instance and override default settings hence configure spxscan.
