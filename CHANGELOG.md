@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/cccteam/spxscan/compare/v0.0.3...v0.0.4) (2025-03-25)
+
+
+### Features
+
+* Support returning records via iter.Seq2 interator ([#19](https://github.com/cccteam/spxscan/issues/19)) ([44077db](https://github.com/cccteam/spxscan/commit/44077dba1b62f52ca0a0bf3189177a07e26160f1))
+
 ## [0.0.3](https://github.com/cccteam/spxscan/compare/v0.0.2...v0.0.3) (2024-07-15)
 
 
