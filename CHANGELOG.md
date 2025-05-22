@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/cccteam/spxscan/compare/v0.0.4...v0.0.5) (2025-05-22)
+
+
+### Code Upgrade
+
+* Update go and go deps ([#23](https://github.com/cccteam/spxscan/issues/23)) ([db736db](https://github.com/cccteam/spxscan/commit/db736db83d6ba2a4fcc2515ea0e1c19d2e09d2a6))
+
 ## [0.0.4](https://github.com/cccteam/spxscan/compare/v0.0.3...v0.0.4) (2025-03-25)
 
 
