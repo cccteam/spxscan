@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/cccteam/spxscan/compare/v0.0.5...v0.0.6) (2025-05-28)
+
+
+### Code Upgrade
+
+* **deps:** Bump github.com/go-jose/go-jose/v4 from 4.0.4 to 4.0.5 ([#26](https://github.com/cccteam/spxscan/issues/26)) ([57eb8fe](https://github.com/cccteam/spxscan/commit/57eb8fe2054c65afb1c10e43a04a829fa664ca63))
+
 ## [0.0.5](https://github.com/cccteam/spxscan/compare/v0.0.4...v0.0.5) (2025-05-22)
 
 
