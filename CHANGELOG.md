@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.7](https://github.com/cccteam/spxscan/compare/v0.0.6...v0.0.7) (2025-06-19)
+
+
+### Code Upgrade
+
+* Update Go to 1.24.4 and update CI versions ([#31](https://github.com/cccteam/spxscan/issues/31)) ([d869454](https://github.com/cccteam/spxscan/commit/d86945403100e34f4a189c1a0198ca3da23d022d))
+
 ## [0.0.6](https://github.com/cccteam/spxscan/compare/v0.0.5...v0.0.6) (2025-05-28)
 
 
