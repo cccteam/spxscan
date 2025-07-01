@@ -3,9 +3,9 @@ module github.com/cccteam/spxscan
 go 1.24.4
 
 require (
-	cloud.google.com/go/spanner v1.82.0
+	cloud.google.com/go/spanner v1.83.0
 	github.com/go-playground/errors/v5 v5.4.0
-	google.golang.org/api v0.238.0
+	google.golang.org/api v0.239.0
 )
 
 require (
