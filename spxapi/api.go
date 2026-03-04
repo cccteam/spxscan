@@ -32,7 +32,7 @@ func WithStructLenient(lenient bool) APIOption {
 }
 
 // Default is the default instance of API with all configuration settings set to default.
-var Default = &API{}
+var Default = &API{lenient: false}
 
 // API is the core type in spxscan. It implements all the logic and exposes functionality available in the package.
 // With API type users can create a custom API instance and override default settings hence configure spxscan.
@@ -42,7 +42,7 @@ type API struct {
 
 // NewAPI creates a new API object with provided list of options.
 func NewAPI(opts ...APIOption) *API {
-	api := &API{}
+	api := &API{lenient: false}
 	for _, o := range opts {
 		o(api)
 	}
