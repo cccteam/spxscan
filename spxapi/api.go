@@ -32,7 +32,7 @@ func WithStructLenient(lenient bool) APIOption {
 }
 
 // Default is the default instance of API with all configuration settings set to default.
-var Default = &API{lenient: false} //nolint:gochecknoglobals
+var Default = &API{lenient: false} //nolint:gochecknoglobals // Default is a package-level singleton providing default configuration.
 
 // API is the core type in spxscan. It implements all the logic and exposes functionality available in the package.
 // With API type users can create a custom API instance and override default settings hence configure spxscan.
