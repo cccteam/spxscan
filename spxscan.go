@@ -11,14 +11,17 @@ import (
 )
 
 // Querier is a type alias for spxapi.Querier.
+//
 // Deprecated: use spxapi.Querier instead.
 type Querier = spxapi.Querier
 
 // TxnRunner is a type alias for spxapi.TxnRunner.
+//
 // Deprecated: use spxapi.TxnRunner instead.
 type TxnRunner = spxapi.TxnRunner
 
 // ErrNotFound is a type alias for spxapi.ErrNotFound.
+//
 // Deprecated: use spxapi.ErrNotFound instead.
 var ErrNotFound = spxapi.ErrNotFound
 

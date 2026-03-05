@@ -13,19 +13,19 @@ import (
 // Select is a high-level function that queries rows from Querier and calls the ScanAll function.
 // See ScanAll for details.
 func SelectSeq[T any](ctx context.Context, api *API, db Querier, statement spanner.Statement) iter.Seq2[*T, error] {
-	iter := db.Query(ctx, statement)
+	rowIter := db.Query(ctx, statement)
 
-	return ScanSeq[T](api, iter)
+	return ScanSeq[T](api, rowIter)
 }
 
 // ScanSeq returns a interator that iterates all rows to the end. After iterating it closes the
 // interator, and propagates any errors that could pop up.
-func ScanSeq[T any](api *API, iter *spanner.RowIterator) iter.Seq2[*T, error] {
+func ScanSeq[T any](api *API, rowIter *spanner.RowIterator) iter.Seq2[*T, error] {
 	return func(yield func(*T, error) bool) {
-		defer iter.Stop()
+		defer rowIter.Stop()
 
 		for {
-			row, err := iter.Next()
+			row, err := rowIter.Next()
 			if errors.Is(err, iterator.Done) {
 				break
 			}
