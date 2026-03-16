@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.8](https://github.com/cccteam/spxscan/compare/v0.0.7...v0.0.8) (2026-03-16)
+
+
+### Features
+
+* Upgrade to go 1.25.8 ([#42](https://github.com/cccteam/spxscan/issues/42)) ([4dd65ac](https://github.com/cccteam/spxscan/commit/4dd65ac745e9ed219508b9d7ffbdd793c9093b94))
+
+
+### Bug Fixes
+
+* Use working release-please action ([#43](https://github.com/cccteam/spxscan/issues/43)) ([f4bd247](https://github.com/cccteam/spxscan/commit/f4bd247e724ec8da77e4dc34f3f2079acc84e9d2))
+
 ## [0.0.7](https://github.com/cccteam/spxscan/compare/v0.0.6...v0.0.7) (2025-06-19)
 
 
