@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.9](https://github.com/cccteam/spxscan/compare/v0.0.8...v0.0.9) (2026-04-29)
+
+
+### Bug Fixes
+
+* address active Trivy security incident ([#49](https://github.com/cccteam/spxscan/issues/49)) ([49dcd2d](https://github.com/cccteam/spxscan/commit/49dcd2db3039c4be0a4561ed13f8aac4ee56b3c8))
+
+
+### Code Upgrade
+
+* upgrade to Go 1.26.2, update deps, and update GitHub Actions workflows ([#54](https://github.com/cccteam/spxscan/issues/54)) ([5dbcf88](https://github.com/cccteam/spxscan/commit/5dbcf880c5f44ac6378d5154f3d5692c658665a1))
+
 ## [0.0.8](https://github.com/cccteam/spxscan/compare/v0.0.7...v0.0.8) (2026-03-16)
 
 
