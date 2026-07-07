@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.12](https://github.com/cccteam/spxscan/compare/v0.0.11...v0.0.12) (2026-07-07)
+
+
+### Code Upgrade
+
+* go deps ([#64](https://github.com/cccteam/spxscan/issues/64)) ([99438e5](https://github.com/cccteam/spxscan/commit/99438e5dd85fab1d77a9da13c80bfc4f66569099))
+
 ## [0.0.11](https://github.com/cccteam/spxscan/compare/v0.0.10...v0.0.11) (2026-06-05)
 
 
