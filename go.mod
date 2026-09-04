@@ -3,9 +3,9 @@ module github.com/cccteam/spxscan
 go 1.26.6
 
 require (
-	cloud.google.com/go/spanner v1.92.0
+	cloud.google.com/go/spanner v1.95.0
 	github.com/go-playground/errors/v5 v5.4.0
-	google.golang.org/api v0.287.0
+	google.golang.org/api v0.287.1
 )
 
 require (
@@ -30,7 +30,7 @@ require (
 	github.com/google/s2a-go v0.1.9 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.3.18 // indirect
-	github.com/googleapis/gax-go/v2 v2.22.0 // indirect
+	github.com/googleapis/gax-go/v2 v2.23.0 // indirect
 	github.com/planetscale/vtprotobuf v0.6.1-0.20240319094008-0393e58bdf10 // indirect
 	github.com/spiffe/go-spiffe/v2 v2.8.1 // indirect
 	go.opencensus.io v0.24.0 // indirect
