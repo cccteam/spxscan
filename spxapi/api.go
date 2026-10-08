@@ -230,7 +230,7 @@ func parseSliceDestination(dst interface{}) (*sliceDestinationMeta, error) {
 	// because eventually we work with fields.
 	// But if it's a slice of primitive type e.g. or []string or []*string,
 	// we must leave and pass elements as is to Rows.Scan().
-	if elementBaseType.Kind() == reflect.Ptr {
+	if elementBaseType.Kind() == reflect.Pointer {
 		elementBaseTypeElem := elementBaseType.Elem()
 		if elementBaseTypeElem.Kind() == reflect.Struct {
 			elementBaseType = elementBaseTypeElem
@@ -248,10 +248,10 @@ func parseSliceDestination(dst interface{}) (*sliceDestinationMeta, error) {
 func parseDestination(dst interface{}) (reflect.Value, error) {
 	dstVal := reflect.ValueOf(dst)
 
-	if !dstVal.IsValid() || (dstVal.Kind() == reflect.Ptr && dstVal.IsNil()) {
+	if !dstVal.IsValid() || (dstVal.Kind() == reflect.Pointer && dstVal.IsNil()) {
 		return reflect.Value{}, fmt.Errorf("spxscan: destination must be a non nil pointer")
 	}
-	if dstVal.Kind() != reflect.Ptr {
+	if dstVal.Kind() != reflect.Pointer {
 		return reflect.Value{}, fmt.Errorf("spxscan: destination must be a pointer, got: %v", dstVal.Type())
 	}
 
