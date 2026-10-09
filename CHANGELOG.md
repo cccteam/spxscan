@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.17](https://github.com/cccteam/spxscan/compare/v0.0.16...v0.0.17) (2026-10-09)
+
+
+### Code Upgrade
+
+* **deps:** bump the go-dependencies group across 1 directory with 2 updates ([#81](https://github.com/cccteam/spxscan/issues/81)) ([865fb70](https://github.com/cccteam/spxscan/commit/865fb709b73103d5428f984f87981a347fb68370))
+* **deps:** Go 1.26.9 and golang.org/x/net v0.60.0; net/http GO-2026-6612, GO-2026-6613 and GO-2026-6617 fixed ([#84](https://github.com/cccteam/spxscan/issues/84)) ([8205f15](https://github.com/cccteam/spxscan/commit/8205f153a01692d6c95daa4a33813c5fabb07518))
+* **deps:** golang-security-scan v8.2.1 with its Grype switch; create-github-app-token v3.2.0 ([#59](https://github.com/cccteam/spxscan/issues/59)) ([44e08b2](https://github.com/cccteam/spxscan/commit/44e08b2e6658cdab523dc32b7152dfe46dabfe67))
+
 ## [0.0.16](https://github.com/cccteam/spxscan/compare/v0.0.15...v0.0.16) (2026-09-21)
 
 
