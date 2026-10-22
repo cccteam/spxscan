@@ -1,6 +1,6 @@
 module github.com/cccteam/spxscan
 
-go 1.26.9
+go 1.27.3
 
 require (
 	cloud.google.com/go/spanner v1.95.1
