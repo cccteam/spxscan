@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.18](https://github.com/cccteam/spxscan/compare/v0.0.17...v0.0.18) (2026-10-22)
+
+
+### Code Upgrade
+
+* **deps:** Go 1.27.3; crypto/x509 GO-2026-6809 fixed ([#86](https://github.com/cccteam/spxscan/issues/86)) ([80d66b2](https://github.com/cccteam/spxscan/commit/80d66b23ba48597434d9db299e8b9fe2707099ba))
+
 ## [0.0.17](https://github.com/cccteam/spxscan/compare/v0.0.16...v0.0.17) (2026-10-09)
 
 
