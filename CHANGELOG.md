@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.0.19](https://github.com/cccteam/spxscan/compare/v0.0.18...v0.0.19) (2026-11-13)
+
+
+### Bug Fixes
+
+* **deps:** bump Go to 1.27.4 to fix GO-2026-6859 ([#91](https://github.com/cccteam/spxscan/issues/91)) ([2b63289](https://github.com/cccteam/spxscan/commit/2b63289de24f60d58f19a8af39ba81e7209d1585))
+
+
+### Code Upgrade
+
+* **deps:** bump the github-actions group across 1 directory with 4 updates ([#93](https://github.com/cccteam/spxscan/issues/93)) ([85085ec](https://github.com/cccteam/spxscan/commit/85085ec71d1f54e90c275543e331097f9fbfd690))
+* **deps:** bump the go-dependencies group across 1 directory with 2 updates ([#89](https://github.com/cccteam/spxscan/issues/89)) ([72b0393](https://github.com/cccteam/spxscan/commit/72b03932da6e159577c5933b94efb6795fff3e03))
+
 ## [0.0.18](https://github.com/cccteam/spxscan/compare/v0.0.17...v0.0.18) (2026-10-22)
 
 
