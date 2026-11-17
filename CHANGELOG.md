@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.20](https://github.com/cccteam/spxscan/compare/v0.0.19...v0.0.20) (2026-11-17)
+
+
+### Bug Fixes
+
+* **deps:** bump go-jose to v4.1.9 to fix Dependabot alerts ([#95](https://github.com/cccteam/spxscan/issues/95)) ([56165aa](https://github.com/cccteam/spxscan/commit/56165aac9306d797e3d068b28e83058334c1630f))
+
 ## [0.0.19](https://github.com/cccteam/spxscan/compare/v0.0.18...v0.0.19) (2026-11-13)
 
 
